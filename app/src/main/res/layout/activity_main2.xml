@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/bG"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bg"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="45dp">
+
+                <ImageView
+                    android:id="@+id/headPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/headphone" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:scrollHorizontally="true"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="30dp"
+            android:scrollbarSize="7dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="55dp">
+
+            <ImageView
+                android:id="@+id/previousButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/nextbutton"
+                android:contentDescription="@string/todo"/>
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/pause"
+                android:contentDescription="@string/todo"/>
+
+            <ImageView
+                android:id="@+id/nextButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:rotation="180"
+                app:srcCompat="@drawable/nextbutton"
+                android:contentDescription="@string/todo"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
